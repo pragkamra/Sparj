@@ -1,0 +1,9 @@
+<div id="main-div">
+     <ul> 
+     <li ng-repeat="data in data">
+       {{ data.Name }}
+	   {{ data.msg }}
+     </li>
+     </ul>
+     
+   </div>

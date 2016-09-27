@@ -1,0 +1,68 @@
+<header>
+  <nav class="cf" >
+  <div class="branding" >
+  <img src="css/Sparj.png" style="width:48px;height:48px;" alt="User Image"></img>
+  <a style="vertical-align:middle;">SPARJ</a>
+  </div>
+  <ul>
+    <li><a ng-href="#/login">Sign In</a></li>
+    <li><a ng-href="#/register">Sign Up</a></li>
+  </ul>
+</div>
+</nav>
+</header>
+<div class="containerlogin">
+		<div class="login-box animated fadeInUp" style="background-color:blue">
+			<div class="box-header" style="background-color:blue;margin-bottom:20px;">
+				<h2 style="Color:white">Sign Up</h2>
+			</div>
+		<form name="myform" ng-submit="register()" novalidate>
+    <table style="width:100%">
+	  <colgroup>
+	    <col width="35%">
+		<col width="65%">
+	  </colgroup>
+	  <tr>
+	  <td style="text-align:right;">
+				<label for="username">Jira Id :</label>
+	  </td>
+	  <td >
+	            <input style="width:95%" type="text" name="jira_id" placeholder="JIRA Id" ng-model="user.jira_id" ng-required="true">
+	  </td>
+	  </tr>
+	  <tr>
+	  <td style="text-align:right;">
+	            <label for="password">Password :</label>
+	  </td>
+	  <td>
+	             <input style="width:95%" type="password" name="jira_pass" placeholder="JIRA Password" ng-model="user.jira_pass" ng-required="true">  
+	  </td>
+	  </tr>
+	  <tr>
+	  <td style="text-align:right;">
+	            <label for="Spark Id">Spark Id :</label>
+	  </td>
+	  <td>
+	            <input type="text" style="width:95%" name="Spark_id" placeholder="Spark Id" ng-model="user.Spark_id" ng-required="true">
+	  </td>
+	  </tr>
+	  <tr>
+	  <td style="text-align:right;">
+	            <label for="password">Password : </label>
+	  </td>
+	  <td>
+	            <input type="password" style="width:95%" name="Spark_pass" placeholder="Spark Password"
+      ng-model="user.Spark_pass" ng-required="true">
+	  </td>
+	  </tr>
+	  <tr>
+	  <td>
+	  </td>
+	  <td>
+        <button type="submit" class="btn" ng-disabled="myform.$invalid">Sign Up</button>&nbsp; | &nbsp;<label> <a ng-href="#/login" style="color:white;">Sign in</a></label>	   
+	  </td>
+	  </tr>
+	</table>
+  </form> 
+	</div>
+</div>

@@ -1,0 +1,67 @@
+<header>
+  <nav class="cf" >
+  <div class="branding" >
+  <img src="css/Sparj.png" style="width:48px;height:48px;" alt="User Image"></img>
+  <a style="vertical-align:middle;">SPARJ</a>
+  </div>
+  <ul>
+	<li><a ng-href="#/login">Sign Out</a></li>
+  </ul>
+</div>
+</nav>
+</header>
+<div class="container-fluid">
+    <div class="left col-xs-12 col-sm-4" style="overflow-y:auto;"> 
+	<h3 class="panel-title" style="text-align: justify;text-transform: uppercase; font-weight: bold;"><b>Jira Details</h3>
+		<form class="search"><input type="text" name="search" ng-model="search" placeholder="Search.."></input></form>
+		<ul id="chatTab" class="nav nav-pills nav-stacked">
+			  <li ng-repeat="indivisual in members| filter:search">
+				<a ng-click="first(indivisual.jiraName)"> {{indivisual.jiraName}} </a>
+			  </li> 
+		</ul>
+	</div>
+    <div class="right col-xs-8 col-sm-8"> 
+		 	
+			
+				
+					<div class="panel">
+						<!--Heading-->
+							<h3 class="panel-title"><b>Jira Description:</b>&nbsp&nbsp&nbsp{{desc}}</h3>
+							
+						<!--Widget body-->
+						<div id="demo-chat-body" class="collapse in">
+							<div class="nano has-scrollbar"  style="height:532px">
+								<div class="nano-content pad-all" id="scbo" tabindex="0" style="right: 0px;" >
+									<ul class="list-unstyled media-block">
+										<li class="mar-btm" ng-repeat="val in comments|date:'medium'">
+											<div class="media-left">
+												<img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt="Profile Picture">
+											</div>
+											<div class="media-body pad-hor">
+												<div class="speech">
+													<a class="media-heading">{{val.name}}</a>
+													<p>{{val.message}}</p>
+													<p class="speech-time">
+													<i class="fa fa-clock-o fa-fw"></i>({{val.createdAt | date:'medium'}})
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							<div class="nano-pane"><div class="nano-slider" style="height: 141px; transform: translate(0px, 0px);"></div></div></div>
+				
+							<!--Widget footer-->
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-xs-9">
+										<textarea style="margin-left:20px; width: 1110px; resize:none;" placeholder="Enter your text" ng-model="usermsg" class="form-control chat-input"> </textarea>
+									</div>
+									<div class="col-xs-3">
+										<button class="btn btn-primary btn-block" style="width: 50%;margin-left: 125px;margin-top: 10px;height: 46px;" type="submit" ng-click="sendMsg(usermsg)">Send</button>
+									</div>
+								</div>
+							</div>
+						</div>
+    </div>
+	

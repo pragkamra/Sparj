@@ -1,0 +1,123 @@
+<header>
+  <nav class="cf" >
+  <div class="branding" >
+  <img src="css/Sparj.png" style="width:48px;height:48px;" alt="User Image"></img>
+  <a style="vertical-align:middle;">SPARJ</a>
+  </div>
+  <ul>
+	<li><a ng-href="#/login">LogOut</a></li>
+  </ul>
+</div>
+</nav>
+</header>
+
+
+<head>
+
+<style>
+table, th, td {
+
+    border-collapse: collapse;
+    padding:8px;
+
+}
+th, td {
+    padding: 15px;
+      border-radius: 5px;
+}
+.cb {
+    list-style: none;
+    padding: 10px;
+    display:inline-block;
+    background-color: #f2f2f2;
+    color: #2D8BCF;
+    border: 1px solid black;
+  border-radius: 5px;
+}
+.cb:hover{
+  background-color: #4a4a4a;
+  color: #FFF;
+}
+
+
+</style>
+</head>
+<div style="width: 100%">
+<div style="width: 30%;float:left;height: 600px;   
+overflow-y : scroll">
+<div  style="height: 50%; float:top;align:centre">
+<p style="align:center;padding:10px">PROJECTS</p>
+  <table style="align:center">
+<tr class="cb" ng-repeat="indivisual in projects">
+<td  class="btn btn-link" ng-click="first(indivisual.name)">{{ indivisual.name}}</td>
+</tr>
+</table>
+</div>
+
+
+</div>
+<div style="height: 30%; ">
+<table style="width:70%;padding:7px">
+  <tr>
+    <th><div class="cb" style="color:#2D8BCF;align:center" ng-click="showDetails =!showDetails">SHOW GRAPHS REPORTS OF ADMIN OF HIGH AND HIGEST PRIORITY in 3d</div>
+
+</div></th>
+ 
+  </tr>
+
+</div>
+
+
+<div style="height: 30%; ">
+<table style="width:70%;padding:7px">
+  <tr>
+    <th><a href="#">JIRA LIST</a></th>
+    <th><input style="height:30px float:left" type="text" name="search" placeholder="Search.."></input></th> 
+  </tr>
+
+</div>
+
+
+<table   style="width:70%">
+<tr style="background-color: #000;
+    color: #FFF;border:#000;tr:nth-child(even){background-color: #f2f2f2}" >
+    <th >PRIORITY </th>
+    <th>TEAM LEAD</th> 
+    <th>CREATED TIME
+ <th>PROJECT NAME</th> 
+    <th>SPARK ROOM</th>
+  </tr>
+  <div style="70%">
+
+
+
+<tr     style="border: 1px solid black;" ng-repeat="indivisual in jiraname">
+
+<td style="border: 1px solid black;">{{ indivisual.priority}}</td>
+ <td style="border: 1px solid black;">{{ indivisual.email}}</td>
+<td style="border: 1px solid black;">{{ indivisual.created}}</td>
+<td style="border: 1px solid black;">{{ indivisual.proj}}</td>
+<td style="border: 1px solid black;" class="btn btn-link" ng-click="spark(indivisual.jiraName)">{{ indivisual.jiraName}}</td>
+
+</tr>
+</tr>
+</table>
+  <div ng-show="showDetails" style="height: 50%;width=50%;float:left">
+    <div fusioncharts
+       width="500"
+       height="200"
+       type="column2d"
+       dataSource="{{myDataSource}}" >
+    
+    </div>
+    <div ng-hide="showDetails" style="height: 50%;width=50%;float:left">
+
+</div>
+    
+
+
+
+</div>
+
+</div>
+</div>

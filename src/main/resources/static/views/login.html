@@ -1,0 +1,52 @@
+<header>
+  <nav class="cf" >
+  <div class="branding" >
+  <img src="css/Sparj.png" style="width:48px;height:48px;" alt="User Image"></img>
+  <a style="vertical-align:middle;text-decoration: none;">SPARJ</a>
+  </div>
+  <ul>
+    <li><a ng-href="#/login">Sign In</a></li>
+    <li><a ng-href="#/register">Sign Up</a></li>
+  </ul>
+</div>
+</nav>
+</header>
+<div class="containerlogin">
+		<div class="login-box animated fadeInUp" style="background-color:blue">
+			<div class="box-header" style="background-color:blue;margin-bottom:20px;">
+				<h2 style="Color:white">Sign In</h2>
+			</div>
+		<form name="myform"  ng-submit="login()" novalidate>
+		
+		  <table style="width:100%">
+	  <colgroup>
+	    <col width="35%">
+		<col width="65%">
+	  </colgroup>
+	  <tr>
+	  <td style="text-align:Right;">
+	            <label for="Spark Id">Spark Id :</label>
+	  </td>
+	  <td>
+	            <input type="text" style="width:95%" name="Spark_id" placeholder="Spark Id" ng-model="user.username" ng-required="true">
+	  </td>
+	  </tr>
+	  <tr>
+	  <td style="text-align:Right;">
+	            <label for="password">Password : </label>
+	  </td>
+	  <td>
+	            <input type="password" style="width:95%" name="Spark_pass" placeholder="Spark Password" ng-model="user.password" ng-required="true">
+	  </td>
+	  </tr>
+	  <tr>
+	  <td>
+	  </td>
+	  <td>
+	<button type="submit" class="btn" ng-disabled="myform.$invalid">Sign In</button>&nbsp; | &nbsp;<label> <a ng-href="#/register" style="color:white;">Sign Up</a></label>
+	  </td>
+	  </tr>
+	</table>
+  </form> 
+	</div>
+</div>

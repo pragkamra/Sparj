@@ -1,0 +1,10 @@
+  <div class="branding" >
+  <img src="css/Sparj.png" style="width:48px;height:48px;" alt="User Image"></img>
+  <a style="vertical-align:middle;">SPARJ</a>
+  </div>
+  <ul>
+    <li><a ng-hide="{{currentUser}}" ng-href="#/login">Login</a></li>
+    <li><a ng-hide="{{currentUser}}" ng-href="#/register">Register</a></li>
+	<li><a ng-show="{{currentUser}}" ng-href="#/login">LogOut</a></li>
+  </ul>
+</div>
